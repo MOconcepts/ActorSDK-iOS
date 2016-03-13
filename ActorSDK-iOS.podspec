@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         		= "ActorSDK-iOS"
-  s.version      		= "1.0.261"
+  s.version      		= "1.0.301"
   s.summary      		= "Actor SDK for intergration Actor Messaging to your apps"
   s.homepage        = "https://actor.im/"
   s.license         = { :type => 'MIT', :file => 'LICENSE' }
@@ -28,7 +28,11 @@ Pod::Spec.new do |s|
   s.dependency 'SZTextView'
   s.dependency 'RSKImageCropper'
   s.dependency 'JDStatusBarNotification'
-  s.dependency 'YYKit'
+  s.dependency 'ElegantPresentations'
+  s.dependency 'YYText'
+  s.dependency 'YYImage', '0.9.3'
+  s.dependency 'YYCategories'
+  s.dependency 'DZNWebViewController'
 
   s.dependency 'BlockAlertsAnd-ActionSheets'
   s.dependency 'RMUniversalAlert'
