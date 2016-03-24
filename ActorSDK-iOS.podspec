@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         		= "ActorSDK-iOS"
-  s.version      		= "1.0.301"
+  s.version      		= "1.0.319"
   s.summary      		= "Actor SDK for intergration Actor Messaging to your apps"
   s.homepage        = "https://actor.im/"
   s.license         = { :type => 'MIT', :file => 'LICENSE' }
@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
   # UI
   s.dependency 'VBFPopFlatButton'
   s.dependency 'MBProgressHUD'
-  s.dependency 'SVProgressHUD'
   s.dependency 'PSTAlertController'
   s.dependency 'SZTextView'
   s.dependency 'RSKImageCropper'
@@ -34,12 +33,14 @@ Pod::Spec.new do |s|
   s.dependency 'YYCategories'
   s.dependency 'DZNWebViewController'
 
-  s.dependency 'BlockAlertsAnd-ActionSheets'
-  s.dependency 'RMUniversalAlert'
-  s.dependency 'PSTAlertController'
   s.dependency 'TTTAttributedLabel'
   s.dependency 'M13ProgressSuite'
 
-  s.preserve_paths = 'Frameworks/ActorSDK.framework'
+  s.preserve_paths = 'Frameworks'
   s.vendored_framework = 'Frameworks/ActorSDK.framework'
+
+  s.xcconfig = { 
+     "SWIFT_INCLUDE_PATHS" => "$(PROJECT_DIR)/ActorSDK-iOS/Frameworks/",
+     "FRAMEWORK_SEARCH_PATHS" => "$(PROJECT_DIR)/ActorSDK-iOS/Frameworks/"
+  }
 end
